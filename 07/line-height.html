@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <title>line-height</title>
-    <style>
-      p {
-        width:600px;
-        border:1px solid #222;
-        padding:10px;
-        margin:10px;
-      }
-      .small-line {
-        line-height:0.7;
-      }
-      .big-line {
-        line-height:2.5;
-      }
-    </style>
-  </head>
-  <body>    
-    <p>껍질에 붉은 빛이 돌아 레드향(감평甘平)이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
-    <p class="small-line">껍질에 붉은 빛이 돌아 레드향(감평甘平)이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
-    <p class="big-line">껍질에 붉은 빛이 돌아 레드향(감평甘平)이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>line-height</title>
+  <style>
+    p {
+      width: 600px;
+      border: 1px solid #222;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .tstyle {
+      /* text-align: right */
+      line-height: 2;
+    }
+
+    /* 강조하고 싶은 부분은 <span>으로 감쌈 */
+    .tstyle-2 {
+      text-decoration: underline;
+      /* text-decoration: line-through; */
+      /* text-decoration: overline; */
+    }
+
+    /* href를 하면 밑줄이 생기는데 스타일로 밑줄 없앰 */
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="tstyle">껍질에 붉은 빛이 돌아 <a href="#">레드향(감평甘平)</a>이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, <span
+      class="tstyle-2">과육이 붉고
+      통통하다.</span></p>
+
 </html>
