@@ -1,32 +1,52 @@
-  <!DOCTYPE html>
-  <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS Grid Layout</title>
-    <style>
-      #wrapper{
-        display:grid;
-        grid-template-columns: 200px 200px 200px;
-        grid-template-rows:100px;
-      }
-    .items{
-      padding:10px;
-      background-color:#eee;
-    }   
-    .items:nth-child(odd){
-      background-color:#bbb;
-    }
-    </style>
+<!DOCTYPE html>
+<html lang="ko">
 
-  </head>
-  <body>
-    <div id="wrapper">
-      <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit.Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>
-      <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
-      <div class="items">Lorem ipsum dolor sit amet.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
-      <div class="items">Lorem ipsum dolor sit.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
-      <div class="items">Lorem, ipsum dolor.</div>
-    </div>
-  </body>
-  </html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Grid Layout</title>
+  <style>
+    #wrapper {
+      display: grid;
+      /* grid-template-columns: 200px 200px 200px; */
+      /* grid-template-rows: 200px 100px; */
+
+      /* 비율로 fr 표현 1:1:1 화면 너비에 따라서 자동조절 가능*/
+      grid-template-columns: 1fr 1fr 1fr;
+      /* grid-template-columns: repeat(3, 1fr);로도 표현 가능*/
+      /* grid-template-rows: 2fr 1fr; */
+
+      /* autofill <-> autofit */
+      /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
+      /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+
+      /* 최소크기 지정 */
+      grid-template-rows: minmax(100px, auto);
+
+    }
+
+    .items {
+      padding: 10px;
+      background-color: #eee;
+    }
+
+    .items:nth-child(odd) {
+      background-color: #bbb;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit.Lorem ipsum dolor,
+      sit amet consectetur adipisicing elit. </div>
+    <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur
+      adipisicing elit</div>
+    <div class="items">Lorem ipsum dolor sit amet.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
+    <div class="items">Lorem ipsum dolor sit.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
+    <div class="items">Lorem, ipsum dolor.</div>
+  </div>
+</body>
+
+</html>
